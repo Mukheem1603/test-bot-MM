@@ -1,4 +1,5 @@
 import discord
+import os
 from discord.ext import commands
 
 client = commands.Bot(command_prefix='#')
@@ -19,4 +20,5 @@ async def on_message(message):
 async def test(ctx):
     await ctx.send("You just revoked the command test")
     
-client.run('NzM4MzMzNjkyMzU0NjI1NTc2.XyKY1Q.2bbrc4cSy97T2SGPeHV3oeQGPtc')
+
+client.run(os.environ['TOKEN'])
